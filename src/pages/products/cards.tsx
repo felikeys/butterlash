@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { HeartIcon, StarIcon } from "../../assets/icons";
 import { ImageCard } from "../../assets/images";
+import AddNewProductsForm from "./add-new-product";
 
 export default function Card() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="w-[358px] h-[436px] bg-white rounded-[14px] grid grid-rows-3">
       <img
@@ -24,11 +28,19 @@ export default function Card() {
               <img src={StarIcon} alt="image" className="w-5 h-5" />
             </div>
           </div>
-          <button className="rounded-lg bg-black px-5 py-2 text-white text-xs cursor-pointer">
+          <button
+            className="rounded-lg bg-black px-5 py-2 text-white text-xs cursor-pointer"
+            onClick={() => setIsModalOpen(true)}
+          >
             <p>Edit Product</p>
           </button>
         </div>
       </div>
+      {/* <AddNewProductsForm/> */}
+      <AddNewProductsForm
+        isModalOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }
