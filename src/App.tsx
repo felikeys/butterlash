@@ -1,10 +1,14 @@
-import { RouterProvider } from "react-router-dom"
-import { router } from "./routes"
+import Header from "./pages/header"
+import AddProducts from "./pages/products"
+
 
 function App() {
 
   return (
-    <RouterProvider router={router}/>
+    <div className="space-y-10">
+    <Header/>
+    <AddProducts/>
+    </div>
   )
 }
 
