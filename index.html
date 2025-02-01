@@ -6,6 +6,39 @@
     <link href="/dist/styles.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    <style>
+      /* Apply the background image to the body */
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url('/background-image.jpg'); /* Path to the image in the public folder */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-attachment: fixed; /* Optional: Makes the background fixed while scrolling */
+        min-height: 100vh; /* Ensures the background covers the full viewport height */
+        font-family: Arial, sans-serif; /* Optional: Set a default font */
+      }
+
+      /* Optional: Add an overlay to improve readability */
+      body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        z-index: -1; /* Place the overlay behind the content */
+      }
+
+      /* Ensure the content is above the overlay */
+      #root {
+        position: relative;
+        z-index: 1;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
