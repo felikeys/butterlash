@@ -154,7 +154,7 @@ const AddNewProductsForm = (props: Props) => {
               <div className="grid grid-cols-2 gap-6">
                 <div className="flex gap-1 flex-col">
                   <label htmlFor="category" className="text-sm font-bold mb-3">Product Category</label>
-                  <div className="bg-neutral-200 px-4 py-2 h-[52px]">
+                  <div className="bg-neutral-200 px-4 py-2 h-[52px] flex items-center">
 
                   <select
                     name="category"
